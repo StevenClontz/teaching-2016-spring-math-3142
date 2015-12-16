@@ -1,0 +1,9 @@
+*.aux
+*.fdb_latex
+*.log
+*.synctex.gz
+*.fdb_latexmk
+*.idx
+*.ilg
+*.ind
+*.out

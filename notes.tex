@@ -1,0 +1,233 @@
+\documentclass[letterpaper, twoside, 12pt]{book}
+\usepackage{notes}
+
+\title{MATH 3412 Notes | Spring 2016}
+\date{Updated: \today}
+\author{Your Name Here\\ UNC Charlotte}
+
+\begin{document}
+
+\maketitle
+
+This document is a template for you to take notes in my MATH 3142 course.
+For your note check grade, you are required to complete all proofs/solutions
+for the problems specified. This template will be updated periodically
+throughout the course; you are responsible for updating your copy
+as the template is updated. See the syllabus for more details.
+
+You should maintain your notes on Overleaf.com and provide me with a
+link so I can check on them. I'll give you notice before notes are ``due'';
+when they are due I will download a copy myself from Overleaf.
+
+This is not a replacement for the textbook for this course,
+\textit{Advanced Calculus} by Patrick M. Fitzpatrick. Many proofs are
+outlined in that text, as well as all the relevant definitions and other
+results not included in these notes.
+
+A proof is valid if and only if it uses concepts proven previously in
+the book. For example, you cannot prove a lemma in Chapter 6 using
+a theorem from Chapter 10, but using a proposition from Chapter 4
+is allowed.
+
+I hope you enjoy working through these results. Please email me with
+any questions.
+
+\noindent| Dr. Steven Clontz \(\<\)sclontz5@uncc.edu\(\>\)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\setcounter{chapter}{5}
+\chapter{Integration: Two Fundamental Theorems}
+
+
+
+
+
+
+
+\section{Darboux Sums: Upper and Lower Integrals}
+
+\begin{lemma}[6.1]
+  Suppose that the function \(f:[a,b]\to\mb R\) is bounded and the numbers
+  \(m,M\) have the property that
+  \[
+    m\leq f(x)\leq M
+  \]
+  for all \(x\) in \([a,b]\). Then, if \(P\) is a partition of the domain
+  \([a,b]\),
+  \[
+    m(b-a)\leq L(f,P)
+      \text{ and }
+    U(f,P)\leq M(b-a)
+  .\]
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{lemma}[6.2, The Refinement Lemma]
+  Suppose that the function \(f:[a,b]\to\mb R\) is bounded and that \(P\)
+  is a partition of its domain \([a,b]\). If \(P^\star\) is a refinement
+  of \(P\), then
+  \[
+    L(f,P)\leq L(f,P^\star)
+      \text{ and }
+    U(f,P^\star)\leq U(f,P)
+  .\]
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{lemma}[6.3]
+  Suppose that the function \(f:[a,b]\to\mb R\) is bounded and that
+  \(P_1,P_2\) are partitions of its domain. Then \(L(f,P_1)\leq U(f,P_2)\).
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{lemma}[6.4]
+  For a bounded function \(f:[a,b]\to\mb R\),
+  \[
+    \overline{\int_a^b} f
+      \leq
+    \underline{\int_a^b} f
+  .\]
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+\begin{exercise}[2]
+  For an interval \([a,b]\) and a positive number \(\delta\),
+  show that there is a partition \(P=\{x_i:0\leq i\leq n\}\) of
+  \([a,b]\) such that each partition interval \([x_i,x_{i+1}]\)
+  of \(P\) has length less than \(\delta\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{exercise}[3]
+  Suppose that the bounded function \(f:[a,b]\to\mb R\) has the property
+  that for each rational number \(x\) in the interval \([a,b]\),
+  \(f(x)=0\). Prove that
+  \[
+    \underline{\int_a^b}f
+      \leq
+    0
+      \leq
+    \overline{\int_a^b}f
+  .\]
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{exercise}[6]
+  Suppose that \(f:[a,b]\to\mb R\) is a bounded function for which there is
+  a partition \(P\) of \([a,b]\) with \(L(f,P)=U(f,P)\). Prove that
+  \(f:[a,b]\to\mb R\) is constant.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+\section{The Archimedes-Riemann Theorem}
+
+
+\begin{lemma}[6.7]
+
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{theorem}[6.8]
+
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+
+% 6.9
+% 6.11
+% ex4
+% ex6b
+% ex9
+% 6.12
+% 6.13
+% 6.14
+% 6.15
+% ex1
+% ex4
+% ex6
+% 6.17
+% 6.18
+% 6.19
+% ex1
+% ex5
+% ex6
+% 6.21
+% 6.22
+% ex1
+% ex5
+% 6.26
+% 6.27
+% 6.29
+% ex2b
+% ex5
+% ex12
+
+
+% 10.2
+% 10.3
+% 10.4
+% 10.6
+% 10.7
+% ex3
+% ex4
+% ex9
+% ex10
+% 10.9
+% 10.10
+% ex1
+% ex2
+% ex5
+% 10.12
+% 10.13
+% 10.15
+% 10.16
+% 10.17
+% 10.19
+% ex2
+% ex3
+% ex7
+% ex12
+% ex13
+
+\end{document}
