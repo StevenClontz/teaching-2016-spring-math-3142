@@ -159,26 +159,94 @@ any questions.
 
 
 \begin{lemma}[6.7]
-
+  For a bounded function \(f:[a,b]\to\mb R\) and a partition \(P\) of
+  \([a,b]\),
+  \[
+    L(f,P)
+      \leq
+    \underline{\int_a^b}f\leq\overline{\int_a^b}f\leq U(f,P)
+  .\]
 \end{lemma}
 \begin{proof}
 
 \end{proof}
 
 
-\begin{theorem}[6.8]
-
+\begin{theorem}[6.8, The Archimedes-Riemann Theorem]
+  Let \(f:[a,b]\to\mb R\) be a bounded function. Then \(f\) is integrable on
+  \([a,b]\) if and only if there is a sequence \(\{P_n\}\) of partitions
+  of the interval \([a,b]\) such that
+  \[
+    \lim_{n\to\infty}[U(f,P_n)-L(f,P_n)]=0
+  .\]
+  Moreover, for any such sequence of partitions,
+  \[
+    \lim_{n\to\infty} L(f,P_n)
+      =
+    \int_a^b f
+      =
+    \lim_{n\to\infty} U(f,P_n)
+  .\]
 \end{theorem}
 \begin{proof}
 
 \end{proof}
 
 
-% 6.9
-% 6.11
-% ex4
-% ex6b
-% ex9
+\begin{example}[6.9]
+  Show that
+  a monotonically increasing function \(f:[a,b]\to\mb R\) is integrable.
+\end{example}
+\begin{solution}
+
+\end{solution}
+
+\begin{example}[6.11]
+  Show that \(\int_0^1 x^2\,dx=\frac{1}{3}\).
+\end{example}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{exercise}[4]
+  Prove that for a natural number \(n\),
+  \[
+    \sum_{i=1}^n i = \frac{n(n+1)}{2}
+  .\]
+  Then use this fact and the Archimedes-Riemann Theorem to show that
+  \(\int_a^b x\,dx=(b^2-a^2)/2\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{exercise}[6b]
+  Use the Archimedes-Riemann Theorem to show that for \(0\leq a<b\),
+  \[
+    \int_a^b x^2\,dx = \frac{b^3-a^3}{3}
+  .\]
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{exercise}[9]
+  Suppose that the functions \(f:[a,b]\to\mb R\) and
+  \(g:[a,b]\to\mb R\) are integrable. Show that there is a sequence
+  \(\{P_n\}\) of partitions of \([a,b]\) that is an Archimediean sequence
+  of partitions for \(f\) on \([a,b]\) and also an Archimedean sequence
+  of partitions for \(g\) on \([a,b]\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\section{Additivity, Monotonicity, and Linearity}
+
 % 6.12
 % 6.13
 % 6.14
