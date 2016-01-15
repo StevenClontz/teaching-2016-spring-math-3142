@@ -245,33 +245,405 @@ any questions.
 \end{solution}
 
 
+
+
 \section{Additivity, Monotonicity, and Linearity}
 
-% 6.12
-% 6.13
-% 6.14
-% 6.15
-% ex1
-% ex4
-% ex6
-% 6.17
-% 6.18
-% 6.19
-% ex1
-% ex5
-% ex6
-% 6.21
-% 6.22
-% ex1
-% ex5
-% 6.26
-% 6.27
-% 6.29
-% ex2b
-% ex5
-% ex12
+
+\begin{theorem}[6.12, Additivity over Intervals]
+  Let \(f:[a,b]\to\mb R\) be integrable on \([a,b]\) and let \(c\in(a,b)\).
+  Then \(f\) is integrable on \([a,c]\) and \([c,b]\), and furthermore
+  \[
+    \int_a^b f = \int_a^c f + \int_c^b f
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
 
 
+\begin{theorem}[6.13, Monotonicity of the Integral]
+  Suppose \(f,g:[a,b]\to\mb R\) are integrable and that \(f(x)\leq g(x)\)
+  for all \(x\in[a,b]\). Then
+  \[
+    \int_a^b f \leq \int_a^b g
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{lemma}[6.14]
+  Let \(f,g:[a,b]\to\mb R\) be bounded and let \(P\) partition \([a,b]\).
+  Then
+  \[
+    L(f,P)+L(g,P)\leq L(f+g,P)
+      \text{~~and~~}
+    U(f+g,P)\leq U(f,P)+U(g,P)
+  .\]
+  Moreover, for any number \(\alpha\),
+  \[
+    U(\alpha f,P)=\alpha U(f,P)
+      \text{~~and~~}
+    L(\alpha f,P)=\alpha L(f,P)
+      \text{~~if~}
+    \alpha\geq 0
+  \]
+  \[
+    U(\alpha f,P)=\alpha L(f,P)
+      \text{~~and~~}
+    L(\alpha f,P)=\alpha U(f,P)
+      \text{~~if~}
+    \alpha< 0
+  .\]
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{theorem}[6.15, Linearity of the Integral]
+  Let \(f,g:[a,b]\to\mb R\) be integrable. Then for any two numbers
+  \(\alpha,\beta\), the function \(\alpha f+\beta g:[a,b]\to\mb R\) is
+  integrable and
+  \[
+    \int_a^b[\alpha f+\beta g]=\alpha\int_a^b f + \beta\int_a^b g
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{exercise}[1]
+  Suppose that the functions \(f,g,f^2,g^2,fg\) are integrable on \([a,b]\).
+  Prove that \((f-g)^2\) is also integrable on \([a,b]\) and that
+  \(\int_a^b(f-g)^2\geq0\). Use this to prove that
+  \[
+    \int_a^b fg
+      \leq
+    \frac{1}{2}\left[
+      \int_a^b f^2 + \int_a^b g^2
+    \right]
+  .\]
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[4]
+  Suppose that \(S\) is a nonempty bounded set of numbers and that \(\alpha\)
+  is a number. Define \(\alpha S\) to be the set \(\{\alpha x:x\in S\}\).
+  Prove that
+  \[
+    \sup\alpha S=\alpha\sup S
+      \text{~~and~~}
+    \inf\alpha S=\alpha\inf S
+      \text{~~if~}
+    \alpha\geq 0
+  \]
+  while
+  \[
+    \sup\alpha S=\alpha\inf S
+      \text{~~and~~}
+    \sup\alpha S=\alpha\inf S
+      \text{~~if~}
+    \alpha< 0
+  .\]
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{exercise}[6]
+  Suppose that \(f:[a,b]\to\mb R\) is bounded and let \(a<c<b\). Prove that if
+  \(f\) is integrable on both \([a,c],[c,b]\), then it is integrable on
+  \([a,b]\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+\section{Continuity and Integrability}
+
+
+\begin{lemma}[6.17]
+  Let the function \(f:[a,b]\to\mb R\) be continuous let \(P\) partition
+  its domain. Then there is a partition interval of \(P\) that contains two
+  points \(u,v\) for which the following estimate holds:
+  \[
+    0
+      \leq
+    U(f,P)-L(f,P)
+      \leq
+    [f(v)-f(u)][b-a]
+  .\]
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{theorem}[6.18]
+  A continuous function on a closed bounded interval is integrable.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{theorem}[6.19]
+  Supose \(f:[a,b]\to\mb R\) is bounded on \([a,b]\) and continuous on
+  \((a,b)\). Then \(f\) is integrable on \([a,b]\) and the value of
+  \(\int_a^b f\) does not depend on the values of \(f\) at the endpoints
+  of \([a,b]\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{exercise}[1]
+  Determine whether each of the following statements is true or false, and
+  justify your answer.
+  \begin{enumerate}[(a)]
+    \item If \(f:[a,b]\to\mb R\) is integrable and \(\int_a^b f=0\), then
+      \(f(x)=0\) for all \(x\in[a,b]\).
+    \item If \(f:[a,b]\to\mb R\) is integrable, then \(f\) is continuous.
+    \item If \(f:[a,b]\to\mb R\) is integrable and \(f(x)\geq0\) for all
+      \(x\in[a,b]\), then \(\int_a^b f\geq 0\).
+    \item A continuous function \(f:(a,b)\to\mb R\) defined on an open interval
+      \((a,b)\) is bounded.
+    \item A continuous function \(f:[a,b]\to\mb R\) defined on a closed interval
+      \([a,b]\) is bounded.
+  \end{enumerate}
+\end{exercise}
+\begin{solution}
+  \begin{enumerate}[(a)]
+    \item
+    \item
+    \item
+    \item
+    \item
+  \end{enumerate}
+\end{solution}
+
+
+\begin{exercise}[5]
+  Suppose that the continuous function \(f:[a,b]\to\mb R\) has the property
+  \[
+    \int_c^d f\leq 0
+      \text{~~whenever~}
+    a\leq c<d\leq b
+  .\]
+  Prove that \(f(x)\leq 0\) for all \(x\in[a,b]\). Is this true if we only
+  require integrability of the function?
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{exercise}[6]
+  Suppose that \(f:[0,1]\to\mb R\) is continuous and that \(f(x)\geq 0\) for
+  all \(x\in[0,1]\). Prove that \(\int_0^1 f>0\) if and only if there is a
+  point \(x_0\in[0,1]\) at which \(f(x_0)>0\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+\section{The First Fundamental Theorem: Integrating Derivatives}
+
+
+\begin{lemma}[6.21]
+  Suppose \(f:[a,b]\to\mb R\) is integrable and that the number \(A\) has
+  the property that for every \(P\) partitioning \([a,b]\),
+  \[
+    L(f,P) \leq A \leq U(f,P)
+  .\]
+  Then
+  \[
+    \int_a^b f = A
+  .\]
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{theorem}[6.22, The First Fundamental Theorem: Integrating Derivatives]
+  Let \(F:[a,b]\to\mb R\) be continuous on \([a,b]\) and differentiable on
+  \((a,b)\). Moreover, suppose that its derivative
+  \(F':(a,b)\to\mb R\) is both continuous and bounded. Then
+  \[
+    \int_a^b F'(x)~dx
+      =
+    F(b)-F(a)
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{exercise}[1]
+  Let \(m,b\) be positive numbers. Find the value of \(\int_0^1 mx+b ~dx\)
+  in the following three ways:
+  \begin{enumerate}[(a)]
+    \item Using elementary geometry, interpreting the integral as an area.
+    \item Using upper and lower Darboux sums based on regular partitions of
+      the interval \([0,1]\) and using the Archimedes-Riemann Theorem.
+    \item Using the First Fundamental Theorem (Integrating Derivatives).
+  \end{enumerate}
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{exercise}[5]
+  The monotonicity property of the integral implies that if the functions
+  \(g,h:[0,\infty)\to\mb R\) are continuous and \(g(x)\leq h(x)\) for all
+  \(x\geq 0\), then
+  \[
+    \int_0^x g\leq \int_0^x h
+    \text{~~ for all~} x\geq 0
+  .\]
+  Use this and the First Fundamental Theorem to show that each of the following
+  inequalities implies the next:
+  \[
+    \cos x \leq 1
+    \text{~~ if~} x\geq 0
+  .\]
+  \[
+    \sin x \leq x
+    \text{~~ if~} x\geq 0
+  .\]
+  \[
+    1-\cos x \leq \frac{x^2}{2}
+    \text{~~ if~} x\geq 0
+  .\]
+  \[
+    x-\sin x \leq \frac{x^3}{6}
+    \text{~~ if~} x\geq 0
+  .\]
+  \[
+    x-\frac{x^3}{6} \leq \sin x \leq x
+    \text{~~ if~} x\geq 0
+  .\]
+\end{exercise}
+
+
+
+
+\section{The Second Fundamental Theorem: Differentiating Integrals}
+
+
+\begin{theorem}[6.26, The Mean Value Theorem for Integrals]
+  Suppose that \(f:[a,b]\to\mb R\) is continuous. Then there is a point \(x_0\)
+  in the interval \([a,b]\) at which
+  \[
+    \frac{1}{b-a}\int_a^b f
+      =
+    f(x_0)
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{proposition}[6.27]
+  Suppose that the function \(f:[a,b]\to\mb R\) is integrable. Define
+  \[
+    F(x) = \int_a^x f
+    \text{~~for all~} x\in[a,b]
+  .\]
+  Then the function \(F:[a,b]\to\mb R\) is continuous.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{theorem}[6.29, The Second Fundamental Theorem: Differentiating Integrals]
+  Suppose that \(f:[a,b]\to\mb R\) is continuous. Then
+  \[
+    \frac{d}{dx}\left[\int_a^x\right]
+      =
+    f(x)
+    \text{~~for all~} x\in(a,b)
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{exercise}[2b]
+  Suppose \(f:[0,2]\to\mb R\) is defined by
+  \[
+    f(x) =
+    \begin{cases}
+      x^2 & \text{if } 0\leq x\leq 1 \\
+      x   & \text{if } 1< x\leq 2
+    \end{cases}
+  .\]
+  Define
+  \[
+    F(x)=\int_a^x f(t)~dt
+    \text{~~for all} x\in[a,b]
+  \]
+  and find a formula for \(F(x)\) which does not involve integrals.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{exercise}[5]
+  Suppose \(f:\mb R\to\mb R\) is continuous. Define
+  \[
+    G(x)
+      =
+    \int_0^x (x-t)f(t)~dt
+    \text{~~for all~} x
+  .\]
+  Prove that \(G''(x)=f(x)\) for all \(x\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{exercise}[12]
+  Suppose that \(f,g:[a,b]\to\mb R\) are continuous and that \(\alpha,\beta\)
+  are real numbers. Define
+  \[
+    H(x)
+      =
+    \int_a^x[\alpha f+\beta g]-\alpha\int_a^x[f]-\beta\int_a^x[g]
+    \text{~~for all~} x\in[a,b]
+  .\]
+  Prove that \(H(a)=0\) and \(H'(x)=0\) for all \(x\in(a,b)\).
+  Use this fact and the Identity Criterion to give an alternate proof of
+  Theorem 6.15 for continuous functions.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\setcounter{chapter}{9}
+\chapter{The Euclidean Space \(\mb R^n\)}
 % 10.2
 % 10.3
 % 10.4
