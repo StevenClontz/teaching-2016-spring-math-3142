@@ -644,22 +644,22 @@ any questions.
 
 
 \setcounter{chapter}{9}
-\chapter{The Euclidean Space \texorpdfstring{\(\mb R^n\)}{Rn}}
+\chapter{The Euclidean Space \texorpdfstring{$\mb R^n$}{R\^n}}
 
 
-\section{The Linear Structure of \texorpdfstring{\(\mb R^n\)}{Rn}
+\section{The Linear Structure of \texorpdfstring{$\mb R^n$}{R\^n}
 and the Scalar Product}
 
 \begin{proposition}[10.2]
-  Let \(\mathbf u,\mathbf v,\mathbf w\in\mb R^n\)
+  Let \(\vect u,\vect v,\vect w\in\mb R^n\)
   and \(\alpha,\beta\in\mb R\). Then both of the following hold:
   \[
-    \<\mathbf u,\mathbf v\>=\<\mathbf v,\mathbf u\>
+    \<\vect u,\vect v\>=\<\vect v,\vect u\>
   \]
   \[
-    \<\alpha\mathbf u+\beta\mathbf w,v\>
+    \<\alpha\vect u+\beta\vect w,v\>
       =
-    \alpha\<\mathbf u,\mathbf v\>+\beta\<\mathbf w,\mathbf v\>
+    \alpha\<\vect u,\vect v\>+\beta\<\vect w,\vect v\>
   \]
 \end{proposition}
 \begin{proof}
@@ -667,30 +667,30 @@ and the Scalar Product}
 \end{proof}
 
 \begin{lemma}[10.4]
-  For \(\mathbf u,\mathbf v\in\mb R^n\), \(\mathbf u,\mathbf v\) are
+  For \(\vect u,\vect v\in\mb R^n\), \(\vect u,\vect v\) are
   orthogonal if and only if
-  \(\|\mathbf u+\mathbf v\|=\|\mathbf u\|^2+\|\mathbf v\|^2\).
+  \(\|\vect u+\vect v\|=\|\vect u\|^2+\|\vect v\|^2\).
 \end{lemma}
 \begin{proof}
 
 \end{proof}
 
 \begin{lemma}[10.5]
-  For \(\mathbf u,\mathbf v\in\mb R^n\) where \(\mathbf v\not=\mathbf 0\),
-  define \(\lambda=\frac{\<\mathbf u,\mathbf v\>}{\<\mathbf v,\mathbf v\>}\)
-  and \(\mathbf w=\mathbf u-\lambda\mathbf v\). Then \(\mathbf v,\mathbf w\)
-  are orthogonal and \(\mathbf u=\mathbf w+\lambda\mathbf v\).
+  For \(\vect u,\vect v\in\mb R^n\) where \(\vect v\not=\vect 0\),
+  define \(\lambda=\frac{\<\vect u,\vect v\>}{\<\vect v,\vect v\>}\)
+  and \(\vect w=\vect u-\lambda\vect v\). Then \(\vect v,\vect w\)
+  are orthogonal and \(\vect u=\vect w+\lambda\vect v\).
 \end{lemma}
 \begin{proof}
 
 \end{proof}
 
 \begin{theorem}[10.6, The Cauchy-Schwarz Inequality]
-  For any two vectors \(\mathbf u,\mathbf v\in\mb R^n\),
+  For any two vectors \(\vect u,\vect v\in\mb R^n\),
   \[
-    |\<\mathbf u,\mathbf v\>|
+    |\<\vect u,\vect v\>|
       \leq
-    \|\mathbf u\|\|\mathbf v\|
+    \|\vect u\|\|\vect v\|
   .\]
 \end{theorem}
 \begin{proof}
@@ -698,48 +698,280 @@ and the Scalar Product}
 \end{proof}
 
 \begin{theorem}[10.7, The Triangle Inequality]
-  For any two vectors \(\mathbf u,\mathbf v\in\mb R^n\),
+  For any two vectors \(\vect u,\vect v\in\mb R^n\),
   \[
-    \|\mathbf u+\mathbf v\|
+    \|\vect u+\vect v\|
       \leq
-    \|\mathbf u\|+\|\mathbf v\|
+    \|\vect u\|+\|\vect v\|
   .\]
 \end{theorem}
 
 \begin{exercise}[3]
-  Show that for \(\mathbf u\in\mb R^n\), \(\alpha\in\mb R\):
+  Show that for \(\vect u\in\mb R^n\), \(\alpha\in\mb R\):
   \begin{enumerate}[(a)]
-    \item \(\|\mathbf u\|=0\) if and only if \(\mathbf u=\mathbf 0\).
-    \item \(\|\alpha\mathbf u\|=|\alpha|\|\mathbf u\|\).
+    \item \(\|\vect u\|=0\) if and only if \(\vect u=\vect 0\).
+    \item \(\|\alpha\vect u\|=|\alpha|\|\vect u\|\).
   \end{enumerate}
 \end{exercise}
+\begin{proof}
 
-% \begin{exercise}[4]
-%   For \(\mathbf u,\mathbf v\in\mathbb R^n\) verify the identity
-%   \[
-%     \|\mathbf u-\mathbf v\|^2
-%       =
-%     \|\mathbf u\|^2+\|\mathbf v\|^2-2\<\mathbf u,\mathbf v\>
-%   .\]
-% \end{exercise}
+\end{proof}
+
+\begin{exercise}[4]
+  For \(\vect u,\vect v\in\mathbb R^n\) verify the identity
+  \[
+    \|\vect u-\vect v\|^2
+      =
+    \|\vect u\|^2+\|\vect v\|^2-2\<\vect u,\vect v\>
+  .\]
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[9]
+  Let \(\vect u\in\mb R^n\) and suppose \(\|\vect u\|<1\).
+  Show that for \(\vect v\in\mb R^n\),
+  \(\|\vect v-\vect u\|<1-\|\vect u\|\) implies
+  \(\|\vect v\|<1\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[10]
+  Let \(\vect u\in\mb R^n\) and \(r>0\). Suppose \(\vect v,\vect w\in\mb R^n\)
+  are at a distance less than \(r\) from \(\vect u\). Prove that if
+  \(0\leq t\leq 1\), then the point \(t\vect v+(1-t)]\vect w\) is also
+  at a distance less than \(r\) from \(\vect u\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\section{Convergence of Sequences in \texorpdfstring{$\mb R^n$}{R\^n}}
+
+\begin{theorem}[10.9, The Componentwise Convergence Criterion]
+  Let \(\{\vect u_k\}\) be a sequence in \(\mb R^n\). Then
+  \(\{\vect u_k\}\) converges to \(\vect u\) if and only if
+  \(\{p_i(\vect u_k)\}\) converges to \(p_i(\vect u)\) for
+  all \(1\leq i\leq n\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[10.10]
+  Let \(\{\vect u_k\}\), \(\{\vect v_k\}\) be sequences in \(\mb R^n\)
+  such that \(\{\vect u_k\}\) converges to \(\vect u\) and
+  \(\{\vect v_k\}\) converges to \(\vect v\). Then for any
+  \(\alpha,\beta\in\mb R\),
+  \[
+    \lim_{k\to\infty}[\alpha\vect u_k+\beta\vect v_k]
+      =
+    \alpha\vect u+\beta\vect v
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{exercise}[1]
+  Let \(\{\vect u_k\}\) be a sequence in \(\mb R^n\) that converges to
+  \(\vect u\). Prove the following for all \(\vect v\in\mb R^n\):
+  \[
+    \lim_{k\to\infty}\<\vect u_k,\vect v\>=\<\vect u,\vect v\>
+  .\]
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[2]
+  Let \(\{\vect u_k\}\) be a sequence in \(\mb R^n\) and
+  \(\vect u\in\mb R^n\). Prove that if
+  \[
+    \lim_{k\to\infty}\<\vect u_k,\vect v\>=\<\vect u,\vect v\>
+  \]
+  holds for all \(\vect v\in\mb R^n\), then \(\{\vect u_k\}\) converges
+  to \(\vect u\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[5]
+  Let \(\{\vect u_k\}\) be a sequence in \(\mb R^n\) that converges to
+  \(\vect u\) where \(\|\vect u\|=>0\). Prove that there is an index \(K\)
+  where
+  \[
+    \|\vect u_k\|>\frac{r}{2}
+    \text{~~if~}
+    k\geq K
+  .\]
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\section{Open Sets and Closed Sets in \texorpdfstring{$\mb R^n$}{R\^n}}
+
+
+\begin{example}[10.11]
+  Let \(a<b\) be in \(\mb R\). Then \(\interior(a,b]=(a,b)\).
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{example}[10.12]
+  Let \(\mb Q\subseteq\mb R\) be the set of rational real numbers.
+  Then \(\interior\mb Q=\emptyset\).
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}[10.13]
+  Every open ball \(B_r(\vect u)\) in \(\mb R^n\) is open.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{example}[10.14]
+  Let \(a<b\) be in \(\mb R\). Then \([a,b]\) is closed.
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{example}[10.15]
+  The set
+  \[
+    [-1,1]\times[-1,1]
+      =
+    \{(x,y)\in\mb R^2:-1\leq x\leq 1 \text{~and~} -1\leq y\leq 1\}
+  \]
+  is closed in \(\mb R^2\).
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[10.16, The Complementing Characterization]
+  A subset \(A\subseteq\mb R^n\) is open if and only if its complement
+  \(\mb R^n\setminus A\) is closed.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}[10.17.i]
+  The union of a collection of open subsets of \(\mb R^n\) is open.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}[10.17.ii]
+  The intersection of a collection of closed subsets of \(\mb R^n\) is closed.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}[10.18.i]
+  The intersection of a finite collection of
+  open subsets of \(\mb R^n\) is open.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}[10.18.ii]
+  The union of a finite collection of
+  closed subsets of \(\mb R^n\) is closed.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}[10.19.i]
+  \(A\subseteq\mb R^n\) is open if and only if \(A\cap\boundary A=\emptyset\).
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}[10.19.ii]
+  \(A\subseteq\mb R^n\) is closed if and only if \(\boundary A\subseteq A\).
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{exercise}[2]
+  Determine which of the following subsets of \(\mb R^2\) are open, closed,
+  neither, or both.
+  \begin{enumerate}[(a)]
+    \item \(\{(x,y):x^2>y\}\)
+    \item \(\{(x,y):x^2+y^2=1\}\)
+    \item \(\{(x,y):x \text{~is rational}\}\)
+    \item \(\{(x,y):x\geq 0,~y\geq0\}\)
+  \end{enumerate}
+\end{exercise}
+\begin{solution}
+  \begin{enumerate}[(a)]
+    \item
+    \item
+    \item
+    \item
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}[3]
+  Let \(r>0\) and \(O=\{\vect u\in\mb R^n:\|\vect u\|>r\}\). Prove that \(O\)
+  is open.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[7a]
+  Show that \(A\subseteq\mb R^n\) is open if and only if
+  \[
+    \vect w + A = \{\vect w+\vect u:\vect u\in A\}
+  \]
+  is open for all \(\vect w\in\mb R^n\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[12]
+  For \(A\subseteq\mb R^n\), denote its closure by
+  \[
+    \closure A = \interior A \cup \boundary A
+  .\]
+  Prove that \(A\subseteq \closure A\). Then prove that
+  \(A=\closure A\) if and only if \(A\) is closed.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+
+\chapter{Continuity, Compactness, and Connectedness}
+
+\section{Continuous Functions and Mappings}
+
 
 \end{document}
 
-% ex9
-% ex10
-% 10.9
-% 10.10
-% ex1
-% ex2
-% ex5
-% 10.12
-% 10.13
-% 10.15
-% 10.16
-% 10.17
-% 10.19
-% ex2
-% ex3
-% ex7
-% ex12
-% ex13
+
