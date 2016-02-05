@@ -642,15 +642,89 @@ any questions.
 \end{solution}
 
 
+
 \setcounter{chapter}{9}
 \chapter{The Euclidean Space \texorpdfstring{\(\mb R^n\)}{Rn}}
-% 10.2
-% 10.3
-% 10.4
-% 10.6
-% 10.7
-% ex3
-% ex4
+
+
+\section{The Linear Structure of \texorpdfstring{\(\mb R^n\)}{Rn}
+and the Scalar Product}
+
+\begin{proposition}[10.2]
+  Let \(\mathbf u,\mathbf v,\mathbf w\in\mb R^n\)
+  and \(\alpha,\beta\in\mb R\). Then both of the following hold:
+  \[
+    \<\mathbf u,\mathbf v\>=\<\mathbf v,\mathbf u\>
+  \]
+  \[
+    \<\alpha\mathbf u+\beta\mathbf w,v\>
+      =
+    \alpha\<\mathbf u,\mathbf v\>+\beta\<\mathbf w,\mathbf v\>
+  \]
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{lemma}[10.4]
+  For \(\mathbf u,\mathbf v\in\mb R^n\), \(\mathbf u,\mathbf v\) are
+  orthogonal if and only if
+  \(\|\mathbf u+\mathbf v\|=\|\mathbf u\|^2+\|\mathbf v\|^2\).
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+\begin{lemma}[10.5]
+  For \(\mathbf u,\mathbf v\in\mb R^n\) where \(\mathbf v\not=\mathbf 0\),
+  define \(\lambda=\frac{\<\mathbf u,\mathbf v\>}{\<\mathbf v,\mathbf v\>}\)
+  and \(\mathbf w=\mathbf u-\lambda\mathbf v\). Then \(\mathbf v,\mathbf w\)
+  are orthogonal and \(\mathbf u=\mathbf w+\lambda\mathbf v\).
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[10.6, The Cauchy-Schwarz Inequality]
+  For any two vectors \(\mathbf u,\mathbf v\in\mb R^n\),
+  \[
+    |\<\mathbf u,\mathbf v\>|
+      \leq
+    \|\mathbf u\|\|\mathbf v\|
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[10.7, The Triangle Inequality]
+  For any two vectors \(\mathbf u,\mathbf v\in\mb R^n\),
+  \[
+    \|\mathbf u+\mathbf v\|
+      \leq
+    \|\mathbf u\|+\|\mathbf v\|
+  .\]
+\end{theorem}
+
+\begin{exercise}[3]
+  Show that for \(\mathbf u\in\mb R^n\), \(\alpha\in\mb R\):
+  \begin{enumerate}[(a)]
+    \item \(\|\mathbf u\|=0\) if and only if \(\mathbf u=\mathbf 0\).
+    \item \(\|\alpha\mathbf u\|=|\alpha|\|\mathbf u\|\).
+  \end{enumerate}
+\end{exercise}
+
+% \begin{exercise}[4]
+%   For \(\mathbf u,\mathbf v\in\mathbb R^n\) verify the identity
+%   \[
+%     \|\mathbf u-\mathbf v\|^2
+%       =
+%     \|\mathbf u\|^2+\|\mathbf v\|^2-2\<\mathbf u,\mathbf v\>
+%   .\]
+% \end{exercise}
+
+\end{document}
+
 % ex9
 % ex10
 % 10.9
@@ -669,5 +743,3 @@ any questions.
 % ex7
 % ex12
 % ex13
-
-\end{document}
