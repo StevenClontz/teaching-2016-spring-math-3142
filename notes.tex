@@ -977,8 +977,119 @@ and the Scalar Product}
 
 \chapter{Continuity, Compactness, and Connectedness}
 
+
 \section{Continuous Functions and Mappings}
 
+\begin{proposition}[11.1]
+  For each \(i\in\{1,\dots,n\}\), the \(i\)th projection map
+  \(p_i:\mb R^n\to\mb R\) is continuous.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[11.3]
+  Let \(\vect u\in A\subseteq \mb R^n\) and \(h,g:A\to\mb R\) be continuous
+  at \(\vect u\). Then for \(\alpha,\beta\in\mb R\), the following functions
+  are continuous at \(\vect u\):
+  \[
+    \alpha h+\beta g : A\to\mb R
+      \hspace{4em}
+    h\cdot g : A\to\mb R
+  .\]
+  Also if \(g(\vect v)\not=0\) for all \(\vect v\in A\), then the following
+  function is also continuous at \(\vect u\):
+  \[
+    \frac{h}{g} : A\to\mb R
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[11.5]
+  Let \(\vect u\in A\subseteq \mb R^n\) and \(G: A\to\mb R^m\) be continuous
+  at \(\vect u\). Also let \(G(A)\subseteq B\subseteq \mb R^m\) and
+  \(H:B\to\mb R^k\) be continuous at \(G(\vect u)\). Then the composition
+  \[
+    H\circ G : A\to\mb R^k
+  \]
+  is continuous at \(\vect u\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[11.9, The Componentwise Continuity Criterion]
+  Let \(\vect u\in A\subseteq \mb R^n\) and \(F:A\to\mb R^m\).
+  Then \(F\) is continuous at \(\vect u\) if and only if
+  \(F_i=p_i\circ F:A\to\mb R\) is continuous at \(\vect u\) for each
+  \(i\in\{1,\dots,n\}\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[11.11, Exercise 12]
+  Let \(\vect u\in A\subseteq \mb R^n\) and \(F:A\to\mb R^m\).
+  Then \(F\) is continuous at \(\vect u\) if and only if for each
+  \(\epsilon>0\) there exists \(\delta>0\) such that
+  \(\|\vect v-\vect u\|<\delta\)
+  implies \(\|F(\vect v)-F(\vect u)\|<\epsilon\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[11.12]
+  Let \(U\subseteq\mb R^n\) be open and \(F:U\to\mb R^m\).
+  Then \(F\) is continuous
+  if and only if \(F^{-1}(V)\) is an open subset of \(\mb R^n\) for every
+  open \(V\subseteq\mb R^m\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{example}[11.15]
+  Use corollary 11.13 and proposition 10.18.i to prove that
+  \(U=\{\vect u\in\mb R^n:a<\|\vect u\|<b\}\) is open.
+  (You may assume \(f(\vect u)=\|\vect u\|\) is continuous.)
+\end{example}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[3]
+  Fix a point \(\vect v\in\mb R^n\). Prove that \(f:\mb R^n\to\mb R\)
+  defined by \(f(\vect u)=\<\vect u,\vect v\>\) is continuous.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[6]
+  Suppose \(f,g:\mb R^n\to\mb R\) are continuous. Prove that
+  \(\{\vect u\in\mb R^n:f(\vect u)=g(\vect u)=0\}\) is closed.
+  (Hint: use corollary 11.13 and proposition 10.17.ii.)
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[11]
+  Let \(A\subseteq\mb R^n\). The characteristic function
+  \(\phi_A:\mb R^n\to\mb R\) for \(A\) is defined to be
+  \[
+    \phi_A(\vect u) =
+    \begin{cases}
+      1 & \text{if } \vect u\in A \\
+      0 & \text{if } \vect u\not\in A
+    \end{cases}
+  .\]
+  Prove that \(\phi_A\) is continuous at points in \(\interior A\)
+  and \(\exterior A\), but not continuous at points in \(\boundary A\).
+\end{exercise}
 
 \end{document}
 
