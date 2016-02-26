@@ -1,0 +1,195 @@
+\documentclass[letterpaper, twoside, 12pt]{book}
+\usepackage{../notes}
+
+\title{MATH 3142 Streaming Lecture | 2016-02-26}
+\date{Updated: \today}
+\author{Dr. Steven Clontz\\ UNC Charlotte}
+
+\begin{document}
+
+\maketitle
+
+
+
+\begin{exercise}[1]
+  Let \(\{\vect u_k\}\) be a sequence in \(\mb R^n\) that converges to
+  \(\vect u\). Prove the following for all \(\vect v\in\mb R^n\):
+  \[\lim_{k\to\infty}\<\vect u_k,\vect v\>=\<\vect u,\vect v\>.\]
+\end{exercise}
+
+\bigskip
+
+\begin{solution}\textbf{[F]:}
+Let \(\vect u_k=(\vect u_{k_1},\vect u_{k_2},...,\vect u_{k_n})\) and \(\vect v=(\vect v_1,\vect v_2,...,\vect v_n)\). Recall the proposition ``\(\vect u_k=(\vect u_{k_1},\vect u_{k_2},...,\vect u_{k_n})\) and \(\vect u=(\vect u_1,\vect u_2,...,\vect u_n)\) then \(\lim_{k\to\infty}\vect u_k=\vect u\) iff\(\lim_{k\to\infty}\vect u_{k_i}=\vect u_i\) for each i''. Since \({\vect u_k}\) in \(\mb R^n\) converges to the point \(\vect v\). Then \(\lim_{k\to\infty}\vect u_{k_i}=\vect u_i\). Therefore,
+\begin{align*}
+      \lim_{k\to\infty}\<\vect u_k,\vect v\> &= \<\lim_{k\to\infty}\vect u_k,\vect v\>\\
+      &= \<\lim_{k\to\infty}(\vect u_{k_1},\vect u_{k_2},...,\vect u_{k_n}),\vect\>\\
+      &= \<(\lim_{k\to\infty}\vect u_{k_1},\lim_{k\to\infty}\vect u_{k_2},...,\lim_{k\to\infty}\vect u_{k_n}),\vect v\>\\
+      &= \<(\vect u_1,\vect u_2,...,\vect u_n),\vect v\>\\
+      &= \<\vect u,\vect v\>\\
+\end{align*}
+\end{solution}
+
+\bigskip
+
+\begin{solution} \textbf{[C]:}
+Let \(\vect v\) be a point in \(R^n.\) By the definition of the scalar product, \[\<\vect u_k,\vect v\>=(u_{1k}v_1+...+u_{nk}v_n).\] Note that \(\{\vect u_k\}=(u_{1k},...,u_{nk})\) converges to \(\vect u=(u_1,...,u_n).\) It follows that \(\<\vect u_k,\vect v\>\) converges to \(\<\vect u,\vect v\>=(u_1v_1+...+u_nv_n).\) Therefore, \[\lim_{k\to\infty}\<\vect u_k,\vect v\>=\<\vect u,\vect v\>.\]
+\end{solution}
+
+\bigskip
+
+\begin{solution} \textbf{[A]:}
+By the Componentwise Convergence Theorem, for any index \(0 \leq i \leq n\), \(\lim_{k\to\infty} p_i (\vect u_k) = p_i (\vect u)\). Then, using the properties of limits, we have
+\[
+\lim_{k\to\infty} \<\vect u_k,\vect v\> = \lim_{k\to\infty} \sum_{i=1}^n p_i (\vect v) p_i (\vect u_k) = \sum_{i=1}^n p_i (\vect v)\lim_{k\to\infty} p_i (\vect u_k) = \sum_{i=1}^n p_i (\vect v) p_i (\vect u) = \<\vect u,\vect v\>
+\]
+\end{solution}
+
+
+\newpage
+
+
+\begin{exercise}[Section 6.1 \#5]
+  Suppose that \(f,g:[a,b]\to\mb R\) are bounded, and have the property that
+  \(g(x)\leq f(x)\) for all \(x\in[a,b]\).
+  \begin{enumerate}[(a)]
+    \item For \(P\) partitioning \([a,b]\), show that
+          \(L(g,P)\leq L(f,P)\).
+    \item Use part (a) to show that
+          \(\underline{\int_a^b}g\leq\underline{\int_a^b}f\).
+  \end{enumerate}
+\end{exercise}
+\begin{solution}
+  \begin{enumerate}[(a)]
+    \item Let \(m(f,i)=\inf\{f(x):x\in[x_{i-1},x_i]\}\) and
+      \(m(g,i)=\inf\{g(x):x\in[x_{i-1},x_i]\}\).
+      Applying the defintions of
+      \[L(f,P)=\sum_{i=1}^n m(f,i)(x_i-x_{i-1})\] and
+      \[L(g,P)=\sum_{i=1}^n m(g,i)(x_i-x_{i-1}),\]
+      and noting that \(m(g,i)\leq m(f,i)\), we have that:
+      \[
+        L(g,P)
+          =
+        \sum_{i=1}^n m(g,i)(x_i-x_{i-1})
+          \leq
+        \sum_{i=1}^n m(f,i)(x_i-x_{i-1})
+          =
+        L(f,P)
+      .\]
+    \item Again, applying definitions:
+      \[
+        \underline{\int_a^b}g
+          =
+        \sup\{L(g,P):P\text{ partitions }[a,b]\}
+          \leq
+        \sup\{L(f,P):P\text{ partitions }[a,b]\}
+          =
+        \underline{\int_a^b}f
+      .\]
+  \end{enumerate}
+\end{solution}
+
+
+\begin{exercise}[Section 6.4 \#8]
+  Suppose that \(f:[a,b]\to\mb R\) is bounded and continuous except
+  at one point \(x_0\in(a,b)\). Prove that \(f\) is integrable.
+  (Hint: let \(f_1:[a,x_0]\to\mb R\) and \(f_2:[x_0,b]\to\mb R\)
+  be defined by \(f_1(x)=f(x)\) and \(f_2(x)=f(x)\), then apply
+  Theorem 6.19.)
+\end{exercise}
+\begin{solution}
+  Let \(f_1:[a,x_0]\to\mb R\) and \(f_2:[x_0,b]\to\mb R\)
+  be defined by \(f_1(x)=f(x)\) and \(f_2(x)=f(x)\).
+  Since \(f\) is continuous everywhere in \([a,b]\) except for \(x_0\),
+  it follows that \(f_1\) is continuous on \((a,x_0)\) and
+  \(f_2\) is continuous on \((x_0,b)\). It follows by Thm 6.19
+  that \(f_1,f_2\) are both integrable.
+
+  Let \(\{P_n^1\}\) be an Archemedian sequence for
+  \(f_1\) on \([a,x_0]\) and
+  \(\{P_n^2\}\) be an Archemedian sequence for \(f_2\) on \([x_0,b]\).
+  Then \(P_n=P_n^1\cup P_n^2\) is a partition of \([a,b]\).
+
+  We now show that \(f\) is integrable on \([a,b]\)
+  by showing that \(\{P_n\}\)
+  is Archemedian for \(f\) on \([a,b]\):
+    \[
+      \lim_{n\to\infty} U(f,P_n)-L(f,P_n)
+        =
+      \lim_{n\to\infty}
+        (U(f,P_n^1)+U(f,P_n^2))
+          -
+        (L(f,P_n^1)+L(f,P_n^2))
+    \]
+    \[
+        =
+      \left(\lim_{n\to\infty} U(f,P_n^1)-L(f,P_n^1)\right)
+        +
+      \left(\lim_{n\to\infty} U(f,P_n^2)-L(f,P_n^2)\right)
+    \]
+    \[
+        =
+      \left(\lim_{n\to\infty} U(f_1,P_n^1)-L(f_1,P_n^1)\right)
+        +
+      \left(\lim_{n\to\infty} U(f_2,P_n^2)-L(f_2,P_n^2)\right)
+        =
+      0 + 0 = 0
+    .\]
+\end{solution}
+
+
+\begin{exercise}[Not in book.]
+  Let \(A\subseteq\mb R^n\). We say \(A\) is \textbf{clopen} if
+  it is both an open and closed subset of \(\mb R^n\). Prove that
+  the only nonempty clopen subset of \(\mb R\) is \(\mb R\) itself.
+  (Hint: let \(x\in A\) and \(R=\{r>0:B_r(x)\subseteq A\}\),
+  and then show that \(R\) has no least upper bound.)
+\end{exercise}
+\begin{solution}
+  Let \(x\in A\) and \(R=\{r>0:B_r(x)\subseteq A\}\), where \(A\)
+  is a clopen subset of \(\mb R\). Suppose that \(q\) is a least upper
+  bound for \(R\). Since for \(0<r<q\) we have that \(B_r(x)\subseteq A\),
+  it follows that \(\bigcup_{0<r<q}B_r(x)=B_q(x)\subseteq A\).
+  Note that \(B_q(x)=(x-q,x+q)\).
+
+  Note that \(\{x+q(1-\frac{1}{k})\}\) is a sequence of points in
+  \((x-q,x+q)\subseteq A\), and
+  \[\lim_{k\to\infty}x+q(1-\frac{1}{k})=x+q(1-0)=x+q.\]
+  It follows that \(x+q\in A\). Similarly, we may show that \(x-q\in A\).
+
+  Let \(p>0\) satisify both \(B_p(x-q)=(x-q-p,x-q+p)\subseteq A\) and
+  \(B_p(x+q)=(x+q-p,x+q+p)\subseteq A\). Note that
+  \[
+    B_{p+q}(x)
+      =
+    (x-q-p,x+q+p)
+      =
+    (x-q-p,x-q+p)
+      \cup
+    (x-q,x+q)
+      \cup
+    (x+q-p,x+q+p)
+  \]
+  \[
+      =
+    B_p(x-q)
+      \cup
+    B_q(x)
+      \cup
+    B_p(x+q)
+      \subseteq
+    A
+  .\]
+  So since \(p+q\in R\) and \(p+q>q\), \(q\) is not an upper bound for
+  \(R\). Contradiction.
+
+  Let \(y\in\mb R\) be distinct from \(x\).
+  Let \(r=|x-y|>0\). Since \(R\) has no upper bound,
+  \(2r\in R\). Since \(y\in B_{2r}(x)\subseteq A\), so \(y\in A\).
+  This shows that \(\mb R\subseteq A\subseteq \mb R\), so
+  \(A=\mb R\).
+\end{solution}
+
+\end{document}
+
+
