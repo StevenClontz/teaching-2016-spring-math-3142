@@ -1142,7 +1142,7 @@ and the Scalar Product}
 
 \end{proof}
 
-\begin{theorem}[11.22, The Extreme Value Theorem]
+\begin{theorem}[11.22, The Extreme Value Theorem, Bolzano-Weierstrass Theorem]
   Let \(A\subseteq\mb R^n\) be nonempty sequentially compact
   and suppose \(f:A\to\mb R^m\) is continuous.
   Then \(f\) attains a smallest and largest value.
@@ -1188,8 +1188,20 @@ and the Scalar Product}
 \end{solution}
 
 \begin{exercise}[4]
-  Let \(D_r(\vect u)=\{\vect v:\|\vect u-\vect v\|<r\}\).
+  Let \(D_r(\vect u)=\{\vect v:\|\vect u-\vect v\|\leq r\}\).
   Prove \(D_r(\vect u)\) is sequentially compact.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[optional, Heine-Borel Theorem]
+  Let \(A\subseteq\mb R^n\). We say \(A\) is compact when for every
+  collection \(\mathcal U\) such that \(U\) is open
+  for all \(U\in\mathcal U\) and \(A\subseteq\bigcup\mathcal U\), there exists
+  a finite subset \(\mathcal F\subseteq\mathcal U\) such that
+  \(A\subseteq\bigcup\mathcal F\). Prove that \(A\) is compact if and only if
+  \(A\) is closed and bounded.
 \end{exercise}
 \begin{solution}
 
