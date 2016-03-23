@@ -1210,6 +1210,198 @@ and the Scalar Product}
 
 
 
+\chapter{Metric Spaces}
+
+\begin{definition}
+  A pair \((X,d)\) is called a \textit{metric space} if \(X\) is a set
+  and \(d\) is a function \(d:X^2\to[0,\infty)\) satisfying the following
+  properties:
+  \begin{itemize}
+    \item Identity: \(d(p,q)=0\) if and only if \(p=q\).
+    \item Symmetry: \(d(p,q)=d(q,p)\).
+    \item Triangle Inequality: \(d(p,q)\leq d(p,w)+d(w,q)\).
+  \end{itemize}
+\end{definition}
+
+\begin{theorem}[12.2]
+  \(dist(\vect p,\vect q)=\|\vect q-\vect p\|\) is
+  a metric on \(\mathbb R^n\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Let \((X,d)\) be a metric space. For \(p\in X,r>0\),
+    \[ B_r(p)=\{q\in X:d(p,q)<r\} \]
+  is the open ball about \(p\) with radius \(r\). For \(A\subseteq X\),
+  \begin{itemize}
+    \item \(\interior A = \{q\in A:\exists r>0(B_r(q)\subseteq A)\}\)
+    \item \(\exterior A = \{q\in A:\exists r>0(B_r(q)\subseteq X\setminus A)\}\)
+    \item \(\boundary A = \{q\in A:\forall r>0(B_r(q)\cap A\not=\emptyset\text{ and }B_r(q)\setminus A\not=\emptyset)\}\)
+  \end{itemize}
+  Call \(A\) open in \((X,d)\) if \(A=\interior A\).
+  Note that these concepts match the definitions we gave for \(\mb R^n\)
+  using the metric \(d(\vect p,\vect q)=\|\vect q-\vect p\|\).
+\end{definition}
+
+\begin{theorem}[12.8]
+  Let \((X,d)\) be a metric space. Let \(p\in X,r>0\). Then
+  \(B_r(p)\) is open.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Let \(d\) be a metric on \(\mb R^n\). We say \(d\) is \textit{compatible
+  with the usual topology on \(\mb R^n\)} if the open sets determined by
+  \(d\) are exactly the open sets determined by \(dist\).
+\end{definition}
+
+
+\begin{example}
+  \(s:\mb R^n\to[0,\infty)\) defined by
+  \(s(\vect u,\vect v)=\max\{|p_i(\vect v)-p_i(\vect u)|:1\leq i\leq n\}\)
+  is a metric on \(\mb R^n\).
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}
+  \(s\) is compatible with the usual topology on \(\mb R^n\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{example}
+  \(t:\mb R^n\to[0,\infty)\) defined by
+  \(t(\vect u,\vect v)=\sum_{i=1}^n |p_i(\vect v)-p_i(\vect u)|\)
+  is a metric on \(\mb R^n\).
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}
+  \(t\) is compatible with the usual topology on \(\mb R^n\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  \(d:X\to[0,\infty)\) defined by
+  \(d(p,q)=1\) for \(p\not=q\)
+  and \(d(p,p)=0\)
+  is called a \textit{discrete metric} on \(X\).
+\end{definition}
+
+
+\begin{theorem}[12.4]
+  The discrete metric on \(X\) is a metric.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}
+  The discrete metric on \(\mb R^n\) is not compatible with the usual
+  topology on \(\mb R^n\). (Hint: show that every subset of a discrete
+  metric space is open.)
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Let \(C([a,b],\mb R)\) be the set of all continuous functions
+  \(f:[a,b]\to\mb R\), and for \(f,g\in C([a,b],\mb R)\) let
+  \(d(f,g)=\max\{|f(x)-g(x)|:x\in[a,b]\}\).
+\end{definition}
+
+\begin{theorem}[12.3]
+  \(d(f,g)=\max\{|f(x)-g(x)|:x\in[a,b]\}\) is a metric on \(C([a,b],\mb R)\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Let \(\{p_k\}\) denote a \textit{sequence} in a metric space \((X,d)\),
+  i.e. a function from \(\mb N\) to \(X\).
+\end{definition}
+
+\begin{definition}
+  We say the sequence \(\{p_k\}\) \textit{converges} to \(p\in X\)
+  when \[\lim_{k\to\infty}d(p_k,p)=0.\]
+\end{definition}
+
+\begin{definition}
+  \(C\subseteq X\) is said to be \textit{closed} in the metric space
+  \((X,d)\) when for every sequence \(\{p_k\}\) of points in \(C\)
+  converging to \(p\in X\), it follows that \(p\in C\).
+\end{definition}
+
+\begin{example}[12.11]
+  The set \(\{f\in C([a,b],\mb R):f(x)\geq 0\}\) is closed.
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[12.12, The Complementing Characterization]
+  Let \((X,d)\) be a metric space and \(A\subseteq X\). Then \(A\) is
+  open in \((X,d)\) if and only if \(X\setminus A\) is closed in \((X,d)\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  A sequence \(\{p_k\}\) in a metric space \((X,d)\) is called a
+  \textit{Cauchy sequence} when for each \(\epsilon>0\) there is an
+  \(N\in\mb N\) such that \(k,l\geq N\) implies \(d(p_k,p_l)<\epsilon\).
+\end{definition}
+
+\begin{proposition}[12.15]
+  Every convergent sequence in a metric space is Cauchy.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{lemma}[9.3]
+  Every Cauchy sequence in \((\mb R,dist)\) is bounded.
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[9.4]
+  A sequence in \((\mb R,dist)\) is Cauchy if and only if it is convergent.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{corollary}[Example 12.16]
+  A sequence in \((\mb R^n,dist)\) is Cauchy if and only if it is convergent.
+\end{corollary}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  A \textit{complete metric space} is a metric space where every
+  Cauchy sequence is convergent.
+\end{definition}
+
+
+
 
 
 
