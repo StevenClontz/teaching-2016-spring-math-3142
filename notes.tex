@@ -1403,6 +1403,269 @@ and the Scalar Product}
 
 
 
+\chapter{Differentiating Functions of Several Variables}
+
+
+\section{Limits}
+
+\begin{definition}
+  Let \(A\subseteq\mb R^n\). We call \(\vect x_*\in\mb R^n\) a
+  \textit{limit point} of \(A\) in the case that there exists a sequence
+  in \(A\setminus\{\vect x_*\}\) which converges to \(\vect x_*\).
+\end{definition}
+
+\begin{definition}
+  Let \(A\subseteq\mb R^n\) have a limit point \(x_*\in\mb R\), and
+  \(f:A\to\mb R\) be a function. Then we say the
+  \textit{limit of \(f\) as \(\vect x\) approaches \(\vect x_*\)}
+  is \(L\in\mb R\), or
+  \[
+    \lim_{\vect x\to\vect x_*} f(\vect x)
+      =
+    L
+  \]
+  in the case that whenever \(\{\vect x_k\}\) is a sequence of points in
+  \(A\setminus\{\vect x_*\}\) converging to \(\vect x_*\),
+  then \(\{f(\vect x_k)\}\) is a sequence of real numbers which
+  converges to \(L\).
+\end{definition}
+
+\begin{theorem}[13.3]
+  Let\(A\subseteq\mb R^n\) and \(\vect x_*\) be a limit point of \(A\).
+  Suppose the functions \(f,g:A\to\mb R\) satsify
+  \[
+    \lim_{\vect x\to\vect x_*} f(\vect x)
+      =
+    L_1
+    ~~~\text{and}~~~
+    \lim_{\vect x\to\vect x_*} g(\vect x)
+      =
+    L_2
+  .\]
+  Then
+  \[
+    \lim_{\vect x\to\vect x_*} [f(\vect x)+g(\vect x)]
+      =
+    L_1+L_2
+  \]
+  and
+  \[
+    \lim_{\vect x\to\vect x_*} [f(\vect x)g(\vect x)]
+      =
+    L_1L_2
+  .\]
+  And assuming \(g(\vect x)\not=0\) for \(x\in A\) and \(L_2\not=0\),
+  \[
+    \lim_{\vect x\to\vect x_*} [f(\vect x)/g(\vect x)]
+      =
+    L_1/L_2
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{example}[13.4]
+  The limit
+  \[
+    \lim_{(x,y)\to(0,0)}\frac{xy}{x^2+y^2}
+  \]
+  does not exist.
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{example}[13.5]
+  \[
+    \lim_{(x,y)\to(0,0)}\frac{x^3}{x^2+y^2}
+      =
+    0
+  .\]
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{exercise}[4]
+  Let \(m,n\in\mb N\). Prove that
+  \[
+    \lim_{(x,y)\to(0,0)}\frac{x^ny^m}{x^2+y^2}
+  \]
+  exists if and only if \(m+n>2\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[5]
+  Give an example of a subset \(A\subseteq\mb R\) and point \(x\in A\)
+  such that \(x\) is not a limit point of \(A\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[12]
+  Show that \(A\subseteq\mb R^n\) is closed if and only if it contains
+  all its limit points.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\section{Partial Derivatives}
+
+\begin{definition}
+  For each \(1\leq i\leq n\), let \(\vect e_i\in\mb R^n\)
+  satisfy \(p_i(\vect e_i)=1\) and \(p_j(\vect e_i)=0\) for \(j\not=i\).
+\end{definition}
+
+\begin{definition}
+  Let \(\vect x\in U\subseteq\mb R^n\) with \(U\) open. For a function
+  \(f:U\to\mb R\), define its \textit{first-order
+  partial derivative with respect to
+  its \(i\)th component at \(\vect x\)} to be
+  \[
+    \left[\frac{\partial}{\partial x_i}f\right](\vect x)
+      =
+    \frac{\partial f}{\partial x_i}(\vect x)
+      =
+    f_{x_i}(\vect x)
+      =
+    \lim_{t\to 0}\frac{f(\vect x+t\vect e_i)-f(\vect x)}{t}
+  \]
+  whenever the limit exists.
+\end{definition}
+
+\begin{definition}
+  Let \(U\subseteq\mb R^n\) be open. For a function
+  \(f:U\to\mb R\) such that \(f_{x_i}(\vect x)\) exists for all \(\vect x\in U\),
+  let \(f_{x_i}:U\to\mb R^n\) be defined as its
+  \textit{first-order partial derivative with respect to
+  its \(i\)th component}.
+\end{definition}
+
+\begin{definition}
+  Let \(U\subseteq\mb R^n\) be open. A function
+  \(f:U\to\mb R\) such that \(f_{x_i}\) exists for all \(1\leq i\leq n\) is said
+  to have \textit{first-order partial derivatives}.
+\end{definition}
+
+\begin{example}[13.8*]
+  If \(f:\mb R^3\to\mb R\) is defined by
+  \[
+    f(x,y,z)=xyz-3xy^2
+  \]
+  then \(f_y:\mb R^3\to\mb R\) satisfies
+  \[
+    f_y(x,y,z)=xz-6xy
+  .\]
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{example}[13.9]
+  The function \(f:\mb R^2\to\mb R\) defined by
+  \[
+    f(x,y) = \begin{cases}
+      xy/(x^2+y^2) & \text{if } (x,y)\not=(0,0) \\
+      0 & \text{if } (x,y)=(0,0) \\
+    \end{cases}
+  \]
+  has first-order partial derivatives, but is not continuous.
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Let \(U\subseteq\mb R^n\) be open. Then a function
+  \(f:U\to\mb R\) is \textit{continuously differentiable} provided that
+  \(f_{x_i}:U\to\mb R\) exists and is continuous for \(1\leq i\leq n\).
+\end{definition}
+
+\begin{definition}
+  Let \(U\subseteq\mb R^n\) be open, and \(f:U\to\mb R^n\) have first-order
+  partial derivatives. Then for \(1\leq i,j\leq n\) let
+  \[
+    \frac{\partial^2 f}{\partial x_j\partial x_i}
+      :
+    U \to \mb R
+  \]
+  be the partial derivative of \(\partial f/\partial x_i:U\to\mb R\)
+  with respect to its \(j\)th component. This is also denoted by
+  \(f_{x_ix_j}\). When \(i=j\), this is also denoted by
+  \(\frac{\partial^2 f}{\partial x_i^2}\).
+\end{definition}
+
+\begin{definition}
+  Let \(U\subseteq\mb R^n\) be open. A function
+  \(f:U\to\mb R\) such that \(f_{x_ix_j}\) exists for all
+  \(1\leq i,j\leq n\) is said
+  to have \textit{second-order partial derivatives}.
+\end{definition}
+
+\begin{definition}
+  Let \(U\subseteq\mb R^n\) be open. A function
+  \(f:U\to\mb R\) such that \(f_{x_ix_j}\) exists and is continuous for all
+  \(1\leq i,j\leq n\) is said
+  to have \textit{continuous second-order partial derivatives}.
+\end{definition}
+
+\begin{lemma}[13.11]
+  Let \(U\subseteq \mb R^2\) be open and nonempty, and suppose
+  \(f:U\to\mb R\) has second-order partial derivatives. Then there are
+  points \((x_1,y_1),(x_2,y_2)\in U\) such that
+  \(f_{xy}(x_1,y_1)=f_{yx}(x_2,y_2)\).
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[13.10]
+  Let \(U\subseteq \mb R^n\) be open and nonempty, and suppose
+  \(f:U\to\mb R\) has continuous second-order partial derivatives.
+  Then for all \(1\leq i,j\leq n\), it follows that
+  \(f_{x_ix_j}=f_{x_jx_i}\).
+\end{theorem}
+\begin{proof}[Proof for n=2]
+
+\end{proof}
+
+\begin{example}[13.12, exercise 13]
+  The function \(f:\mb R^2\to\mb R\) defined by
+  \[
+    f(x,y) = \begin{cases}
+      xy(x^2-y^2)/(x^2+y^2) & \text{if } (x,y)\not=(0,0) \\
+      0 & \text{if } (x,y)=(0,0) \\
+    \end{cases}
+  \]
+  has second-order partial derivatives, but
+  \[
+    f_{xy}(0,0)=-1
+      ~~~\text{while}~~~
+    f_{yx}(0,0)=1
+  .\]
+\end{example}
+\begin{proof}
+
+\end{proof}
+
+\begin{exercise}[4]
+  Prove that \(g:\mb R^2\to\mb R\) satisfying \(|g(x,y)|\leq x^2+y^2\)
+  must have partial derivatives with respect to both \(x\) and \(y\)
+  at the point \((0,0)\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+
+
 
 
 
