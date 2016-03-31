@@ -1090,6 +1090,9 @@ and the Scalar Product}
   Prove that \(\phi_A\) is continuous at points in \(\interior A\)
   and \(\exterior A\), but not continuous at points in \(\boundary A\).
 \end{exercise}
+\begin{solution}
+
+\end{solution}
 
 
 \section{Sequential Compactness, Extreme Values, and Uniform Continuity}
@@ -1662,6 +1665,138 @@ and the Scalar Product}
 \begin{solution}
 
 \end{solution}
+
+
+\section{The Mean Value Theorem and Directional Derivatives}
+
+\begin{lemma}[13.14, The Mean Value Lemma]
+  Let \(U\subseteq\mb R^n\) be open and \(1\leq i\leq n\). Let
+  \(f:U\to\mb R\) be a function with a partial derivative with respect to its
+  \(i\)th component at each point in \(U\). Let \(\vect x\in U\) and
+  \(a\in\mb R\) such that \(\vect x+\theta a\vect e_i\in U\) for all
+  \(\theta\in[0,1]\). Then there is some \(\theta\in(0,1)\) such that
+  \[
+    f(\vect x+a\vect e_i)
+      -
+    f(\vect x)
+      =
+    a\frac{\partial f}{\partial x_i}(\vect x+\theta a\vect e_i)
+  .\]
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}[13.15, The Mean Value Proposition]
+  Let \(\vect x\in\mb R^n\) and \(r>0\). Let \(f:B_r(\vect x)\to\mb R\)
+  be a function with first-order partial derivatives. Then if
+  \(\vect h\in\mb R^n\) satisfies \(\|\vect h\|<r\), then
+  there are points \(\vect z_i\in B_{\|\vect h\|}(\vect x)\) for
+  \(1\leq i\leq n\) satisfying
+  \[
+    f(\vect x+\vect h)
+      -
+    f(\vect x)
+      =
+    \sum_{i=1}^n
+    p_i(\vect h)
+    \frac{\partial f}{\partial x_i}(\vect z_i)
+  .\]
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Let \(\vect x\in U\subseteq\mb R^n\) where \(U\) is open, let
+  \(f:U\to\mb R\) be a function, and let
+  \(\vect p\in\mb R^n\setminus\{\vect 0\}\). Define the
+  \textit{directional derivative} of \(f\) at \(\vect x\) in the direction
+  \(\vect p\) by
+  \[
+    \frac{\partial f}{\partial \vect p}(\vect x)
+      =
+    \lim_{t\to 0}\frac{f(\vect x+t\vect p)-f(\vect x)}{t}
+  \]
+  whenever that limit exists.
+\end{definition}
+
+\begin{definition}
+  Let \(\vect x\in U\subseteq\mb R^n\) where \(U\) is open, and let
+  \(f:U\to\mb R\) be a function with first-order partial derivatives
+  at \(\vect x\). Define its \textit{gradient} \(\nabla f(\vect x)\in\mb R^n\)
+  at \(\vect x\) to satisfy \(p_i(\nabla f(\vect x))=f_{x_i}(\vect x)\)
+  for all \(1\leq i\leq n\).
+  If its gradient exists at every \(\vect x\in U\), then let
+  \(\nabla f:U\to\mb R^n\) be the \textit{gradient function}
+  defined by evaluating the gradient at each point.
+\end{definition}
+
+\begin{theorem}[13.16, The Directional Derivative Theorem]
+  Let \(U\subseteq\mb R^n\) be open and \(f:U\to\mb R\) be continuously
+  differentiable. Then for each \(\vect x\in U\) and
+  \(\vect p\in\mb R^n\setminus\{\vect 0\}\), \(f\) has a directional derivative
+  at \(\vect x\) in the direction of \(\vect p\) given by
+  \[
+    \frac{\partial f}{\partial \vect p}(\vect x)
+      =
+    \<\vect p,\nabla f(\vect x)\>
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[13.17, The Mean Value Theorem]
+  Let \(U\subseteq\mb R^n\) be open and \(f:U\to\mb R\) be continuously
+  differentiable. Let \(\vect x,\vect h\in \mb R^n\)
+  such that \(\vect x+\theta \vect h\in U\) for all
+  \(\theta\in[0,1]\). Then there is some \(\theta\in(0,1)\) such that
+  \[
+    f(\vect x+\vect h)
+      -
+    f(\vect x)
+      =
+    \<\vect h,\nabla f(\vect x+\theta\vect h)\>
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{corollary}[13.18]
+  Let \(\vect x\in U\subseteq\mb R^n\) with \(U\) open and let \(f:U\to\mb R\)
+  be continuously differentiable. Then the unit vector maximizing
+  the value of the directional derivative of \(f\) at \(\vect x\) is
+  \[
+    \vect p_0
+      =
+    \frac{\nabla f(\vect x)}{\|\nabla f(\vect x)\|}
+  .\]
+\end{corollary}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[13.20]
+  Let \(U\subseteq\mb R^n\) be open and \(f:U\to\mb R\) be continuously
+  differentiable. Then \(f\) is continuous.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{exercise}[4]
+  Suppose that \(f:\mb R^n\to\mb R\) has first-order partial derivatives
+  and that \(\vect x\) is a local minimizer for \(f\), that is,
+  there exists some \(\epsilon>0\) such that for all
+  \(\vect y\in B_\epsilon(\vect x)\), \(f(\vect y)\geq f(\vect x)\).
+  Prove that \(\nabla f(\vect x)=\vect 0\).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
 
 
 
