@@ -1799,6 +1799,361 @@ and the Scalar Product}
 \end{solution}
 
 
+\setcounter{chapter}{-1}
+\chapter[Log, Exp, and Trig Functions]{Logrithmic, Exponential, and Trigonometric Functions}
+
+Assume all sequences in this chapter are indexed by the nonnegative integers,
+and that \(0^0=1\).
+
+\section{Logrithms and Exponential Functions}
+
+\begin{theorem}[The Identity Criterion]
+  A differentiable function \(g:U\to\mb R\) where \(U\) is an open interval
+  of \(\mb R\) is the constant function \(0\) if and only if
+  \[
+    \begin{cases}
+      g'(x)=0 & \text{ for all } x\in U \\
+      g(x_0)=0 & \text{ for some } x_0\in U
+    \end{cases}
+  .\]
+\end{theorem}
+\begin{proof}
+  Proved in MATH 3141.
+\end{proof}
+
+\begin{proposition}[7.1]
+  Let \(x_0\in U\) for some open interval \(U\subseteq\mb R\),
+  and suppose \(f:(a,b)\to\mb R\) is continuous.
+  Then for any number \(y_0\), the function \(F:U\to\mb R\) defined by
+  \[
+    F(x) = y_0 + \int_{x_0}^x f
+  \]
+  is the unique funciton satisfying
+  the conditions of the following differential equation:
+  \[
+    \begin{cases}
+      F'(x)=f(x) & \text{ for all } x\in U \\
+      F(x_0)=y_0
+    \end{cases}
+  .\]
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Define the \textit{natural logrithm} function
+  \(\ln:(0,\infty)\to\mb R\) by \(\ln(x)=\int_1^x\frac{1}{t}~dt\).
+\end{definition}
+
+\begin{theorem}[5.1]
+  The natural logrithm function satisfies the following properties for
+  all \(a,b>0\), \(c\in\mb R\), and \(r\in\mb Q\).
+  \begin{enumerate}[(a)]
+    \item \(\ln(ab)=\ln(a)+\ln(b)\).
+    \item \(\ln(a^r)=r\ln(a)\).
+    \item There exists \(x>0\) such that \(\ln(x)=c\).
+  \end{enumerate}
+\end{theorem}
+\begin{proof}
+  \begin{enumerate}[(a)]
+    \item
+
+    \item
+
+    \item
+
+  \end{enumerate}
+\end{proof}
+
+\begin{proposition}[pg. 120]
+  The natural logrithm
+  \(\ln:(0,\infty)\to\mb R\)
+  has a differentiable inverse function \(\exp:\mb R\to(0,\infty)\),
+  called the \textit{exponential} function.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Let the \textit{natural number}
+  \(e\in\mb R\) be defined by \(\exp(1)\). (Note
+  \(\ln(e)=\ln(\exp(1))=1\).)
+\end{definition}
+
+\begin{proposition}[pg. 120]
+  The exponential function \(\exp\) is the unique solution to the
+  differential equation
+  \[
+    \begin{cases}
+      \frac{d}{dx}[\exp(x)]=\exp(x) & \text{ for all } x\in \mb R \\
+      \exp(0)=1
+    \end{cases}
+  .\]
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Define \(a^x=\exp(x\ln(a))\) for \(a>0\) and all real numbers \(x\).
+  (In particular, \(e^x=\exp(x\ln(e))=\exp(x)\).)
+\end{definition}
+
+\begin{proposition}[pg. 121]
+  The above definition is compatible with the previously given definition
+  for exponentiation for rational numbers.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}[5.2, 5.3]
+  Let \(a>0\) and \(r\in\mb R\). Then
+  \[
+    \frac{d}{dx}[a^x]=a^x\ln a
+    ~~~\text{ for all } x\in\mb R \text{, and}
+  \]
+  \[
+    \frac{d}{dx}[x^r]=rx^{r-1}
+    ~~~\text{ for all } x>0
+  .\]
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[5.4]
+  Let \(c,k\in\mb R\). Then \(F(x)=ce^{kx}\) is the unique solution
+  to the differential equation
+  \[
+    \begin{cases}
+      F'(x)=kF(x) & \text{ for all } x\in \mb R \\
+      F(0)=c
+    \end{cases}
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\section{Power Series}
+
+\begin{definition}
+  For a sequence of real numbers \(\{a_k\}\), let \(\{s_k\}\) be its
+  \textit{sequence of partial sums} defined by
+  \[
+    s_n = \sum_{k=0}^{n} a_k
+  .\]
+\end{definition}
+
+\begin{definition}
+  Define the \textit{series} of a sequence \(\{a_k\}\) by
+  \[
+    \sum_{k=0}^\infty a_k
+      =
+    \lim_{n\to\infty} s_n
+      =
+    \lim_{n\to\infty}\left[\sum_{k=0}^{n} a_k\right]
+  \]
+  whenever the limit exists. If so, the series is said to \textit{converge},
+  and if not, the series is said to \textit{diverge}.
+\end{definition}
+
+\begin{definition}
+  Let \(\{c_k\}\) be a sequence of real numbers, and let
+  \[
+    D
+      =
+    \{
+      x\in\mb R
+    :
+      \sum_{k=0}^\infty c_kx^k
+      \text{ converges}
+    \}
+  .\]
+  Let \(f:D\to\mb R\) defined by \(f(x)=\sum_{k=0}^\infty c_kx^k\) be
+  the \textit{power series expansion} of \(\{c_k\}\), and call
+  \(D\) its \textit{domain of convergence}.
+\end{definition}
+
+In the interest of time, we will assume all given series converge on
+an appropriate domain (you did many such problems in your
+Calculus II course), as well as assume the following theorem without proof.
+
+\begin{theorem}[9.41]
+  Let \(D\) be the domain of convergence of the power series expansion
+  of \(\{c_k\}\), and suppose \(r>0\) satisfies \((-r,r)\subseteq D\).
+  Then \(f:(-r,r)\to\mb R\) defined by
+  \(f(x)=\sum_{k=1}^\infty c_kx^k\) has derivatives of all orders
+  satisfying
+  \[
+    \frac{d^n}{dx^n}[f(x)]
+      =
+    \sum_{k=0}^\infty \frac{d^n}{dx^n}[c_kx^k]
+  .\]
+\end{theorem}
+
+\begin{theorem}
+  \[
+   \exp(x)
+      =
+    \sum_{k=0}^\infty \frac{1}{k!}x^k
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\section{Trigonometric Functions}
+
+\begin{definition}
+  Define the \textit{cosine} function \(\cos:\mb R\to\mb R\) by
+  \[
+    \cos(x)
+      =
+    \sum_{k=0}^\infty
+    \frac{(-1)^k}{(2k)!}x^{2k}
+  .\]
+\end{definition}
+
+\begin{theorem}[9.42]
+  The cosine function is a solution to the differential equation
+  \[
+    \begin{cases}
+      F''(x)=-F(x) & \text{ for all } x\in \mb R \\
+      F(0)=1 \\
+      F'(0)=0
+    \end{cases}
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{lemma}[5.5]
+  The unique solution to the differential equation
+  \[
+    \begin{cases}
+      z''(x)=-z(x) & \text{ for all } x\in \mb R \\
+      z(0)=0 \\
+      z'(0)=0
+    \end{cases}
+  \]
+  is the constant function valued at \(0\).
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{corollary}
+  \(\cos(x)\) is the unique solution to the differential equation
+  \[
+    \begin{cases}
+      F''(x)=-F(x) & \text{ for all } x\in \mb R \\
+      F(0)=1 \\
+      F'(0)=0
+    \end{cases}
+  .\]
+\end{corollary}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Let the \textit{sine} function
+  \(\sin:\mb R\to\mb R\) be defined by \(\sin(x)=-\frac{d}{dx}[\cos x]\).
+\end{definition}
+
+\begin{theorem}
+  The sine function satisfies
+  \[
+    \sin(x)
+      =
+    \sum_{k=0}^\infty
+    \frac{(-1)^k}{(2k+1)!}x^{2k+1}
+  \]
+  and is the unique solution to the differential equation
+  \[
+    \begin{cases}
+      F''(x)=-F(x) & \text{ for all } x\in \mb R \\
+      F(0)=0 \\
+      F'(0)=1
+    \end{cases}
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[5.6]
+  For all real numbers \(x,y\):
+  \begin{enumerate}[(a)]
+    \item \([\sin x]^2+[\cos x]^2=1\).
+    \item \(\sin(x+y)=\sin(x)\cos(y)+\cos(x)\sin(y)\).
+    \item \(\cos(x+y)=\cos(x)\cos(y)-\sin(x)\sin(y)\).
+    \item \(|\sin x|\leq 1\) and \(|\cos x|\leq 1\).
+  \end{enumerate}
+\end{theorem}
+
+\begin{definition}
+  A function \(f:\mb R\to\mb R\) is said to be \textit{periodic} with
+  a \textit{period} \(T>0\) if it satisfies
+  \[
+    f(x+T)=f(x)
+    ~~~\text{for all }x\in\mb R
+  .\]
+\end{definition}
+
+\begin{theorem}[5.7]
+  There exists a smallest \(x>0\) satisfying \(\cos(x)=0\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}
+  Define the number \(\pi\in\mb R\) such that \(x=\pi/2\) is the
+  smallest positive number satisfying \(\cos(x)=0\).
+\end{definition}
+
+\begin{theorem}[5.8]
+  The sine and cosine functions are both periodic with period \(2\pi\).
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}[7.7, Integration by Substitution]
+  Let \(f:[a,b]\to\mb R\) and \(g:[c,d]\to\mb R\) be continuous, such that
+  \(g:(c,d)\to\mb R\) has a bounded continuous derivative and
+  \(g[(c,d)]\subseteq(a,b)\). Then
+  \[
+    \int_c^d (f\circ g)g'
+      =
+    \int_{g(c)}^{g(d)} f
+  .\]
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}[7.8, The Geometric Interpretation of \(\pi\)]
+  \[
+    \int_0^1\sqrt{1-x^2}dx = \frac{\pi}{4}
+  .\]
+  That is, \(\pi\) is the area of a circle with radius \(1\).
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+
+
+
+
 
 
 
