@@ -1,0 +1,292 @@
+\documentclass[12pt]{exam}
+
+\newcommand{\ds}{\ensuremath{\displaystyle}}
+
+\usepackage{amsmath,amsfonts, amsthm}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{harpoon}
+\renewcommand{\arraystretch}{1.5}
+
+\newcommand{\harpvec}[1]{\overrightharp{\ensuremath{\mathbf{#1}}}}
+\newcommand{\vect}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\p}{\partial}
+
+% ref: http://pgfplots.sourceforge.net/gallery.html
+% ref: http://tex.stackexchange.com/a/74575/79754
+\usepackage{pgfplots}% This uses tikz
+\pgfplotsset{compat=newest}% use newest version
+\tikzset{LineStyle/.style={smooth, ultra thick, samples=400}}
+
+% \printanswers
+
+\begin{document}
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+MATH 3142-001 | Spring 2016 | Dr. Clontz | Final Exam Part 1
+}}}
+\end{center}
+\vspace{0.1in}
+\makebox[\textwidth]{
+  Name:\enspace\hrulefill\hrulefill\hrulefill
+}
+
+\vspace{12pt}
+
+\begin{itemize}
+  \item Each problem is labeled with its worth toward the total grade
+        of 100 points for this final exam.
+  \item You do not need to show your work on these multiple-choice problems. No
+        partial credit will be given.
+  \item You may not use any notes/electronics on this portion of the exam.
+  \item This part of the midterm is due after 30 minutes. Materials submitted
+        late will be penalized by \(50\%\).
+\end{itemize}
+
+\newpage
+
+\noindent
+For each of the following statements, choose if it is True or False.
+\bigskip
+\begin{questions}
+
+\question[1]
+A continuous function on a closed bounded interval is integrable.
+\begin{choices}
+\item True
+\item False
+\end{choices}
+\bigskip
+\question[1]
+Let \(A\subseteq\mathbb R^n\) and \(F:A\to\mathbb R^m\) be continuous.
+If \(F(A)\) is sequentially compact, then \(A\) is sequentially compact.
+\begin{choices}
+\item True
+\item False
+\end{choices}
+\bigskip
+\question[1]
+The sequence of points \(\{\frac{1}{n}\}\) in \(\mathbb R\) is Cauchy.
+\begin{choices}
+\item True
+\item False
+\end{choices}
+\bigskip
+\question[1]
+Every function \(f:\mathbb R^n\to\mathbb R\)
+with first-order partial derivatives is continuous.
+\begin{choices}
+\item True
+\item False
+\end{choices}
+\bigskip
+\question[1]
+The exponential function \(\operatorname{exp}:\mathbb R\to\mathbb R\)
+is the unique function whose derivative is itself.
+\begin{choices}
+\item True
+\item False
+\end{choices}
+
+\newpage
+
+Choose the most appropriate response for each.
+
+\bigskip
+
+\question[1]
+Which of these is a closed subset of \(\mathbb R\)?
+\begin{choices}
+\item \(\{\frac{1}{2^n}:n\in\mathbb N\}\)
+\item \(\{0\}\cup\{\frac{1}{n+1}:n\in\mathbb N\}\)
+\item \(\mathbb Q\)
+\end{choices}
+\bigskip
+\question[1]
+Which of these is a sequentially compact subset of \(\mathbb R^2\)?
+\begin{choices}
+\item \(\{(x,y)\in\mathbb R^2: x^2+y^2<4\}\)
+\item \(\{(x,y)\in\mathbb R^2: y=3x-4\}\)
+\item \(\{(x,y)\in\mathbb R^2: \max(|x|,|y|)=1\}\)
+\end{choices}
+\bigskip
+\question[1]
+Which of these is not a requirement for a metric \(d:X^2\to[0,\infty)\)?
+\begin{choices}
+\item \(d(x,y)=d(y,x)\) for all \(x,y\in X\)
+\item \(d(x,y)d(y,z)d(x,z)=1\) for all \(x,y,z\in X\)
+\item \(d(x,z)\leq d(x,y)+d(y,z)\) for all \(x,y,z\in X\)
+\end{choices}
+\bigskip
+\question[1]
+Let \(f:\mathbb R^2\to\mathbb R\).
+Which of these is equal to \(\ds\lim_{t\to0}\frac{f(x+t,y+2t)-f(x,y)}{t}\)?
+\begin{choices}
+\item \(\<(1,2),\nabla f(x,y)\>\)
+\item \(f_x(x,y)+2f_y(x,y)\)
+\item \(\frac{\partial^2 f}{\partial x\partial y}(x,2y)\)
+\end{choices}
+\bigskip
+\question[1]
+Which of these functions \(f:\mathbb R\to\mathbb R\) satisfies
+\(f(0)=0\), \(f'(0)=1\), \(f''(x)=-f(x)\)?
+\begin{choices}
+\item \(f(x)=\sin x\)
+\item \(f(x)=\cos x\)
+\item \(f(x)=\ln x\)
+\end{choices}
+\end{questions}
+
+
+\newpage
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+MATH 3142-001 | Spring 2016 | Dr. Clontz | Final Exam Part 2
+}}}
+\end{center}
+\vspace{0.1in}
+\makebox[\textwidth]{
+  Name:\enspace\hrulefill\hrulefill\hrulefill
+}
+
+\vspace{12pt}
+
+\begin{itemize}
+  \item Each problem is labeled with its worth toward the total grade
+        of 100 points for this midterm.
+  \item You must choose four of the eight problems to submit. These should
+        be stapled to this cover sheet. Save the other four problems
+        for your reference in Part 3.
+  \item (Approved students may defer an extra problem to Part 3.)
+  \item Each problem requires a rigorous proof. When in doubt, don't skip
+        details. You may sketch pictures to help illustrate concepts, but
+        the proof must still be valid without the use of illustrations.
+  \item You may use your notes or textbook once Part 1 has been submitted.
+        Electronics are still disallowed.
+  \item This part of the midterm is due after 150 minutes. Materials submitted
+        late will be penalized by \(50\%\).
+\end{itemize}
+
+\newpage
+
+\newpage
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+MATH 3142-001 | Spring 2016 | Dr. Clontz | Final Exam Part 3
+}}}
+\end{center}
+\vspace{0.1in}
+\makebox[\textwidth]{
+  Name:\enspace\hrulefill\hrulefill\hrulefill
+}
+
+\vspace{12pt}
+
+\begin{itemize}
+  \item Each problem is labeled with its worth toward the total grade
+        of 100 points for this midterm.
+  \item You must choose two of the four problems you didn't choose
+        for Part 2 to submit by email.
+  \item (Approved students who deferred a problem to Part 3 should submit
+        three total by email.)
+  \item Each problem requires a rigorous proof. When in doubt, don't skip
+        details. You may sketch pictures to help illustrate concepts, but
+        the proof must still be valid without the use of illustrations.
+  \item You may use any notes you wish, and even collaborate with other
+        students, as long as you submit your own work.
+        \textbf{Plagiarism will be treated as a violation of academic honesty.}
+  \item Solutions must be typeset using \LaTeX{}. The professor will
+        provide a template via email.
+  \item This part of the midterm is due by email at 11:59pm on Friday, March 13.
+        Materials submitted late will not be graded.
+\end{itemize}
+
+\newpage
+
+\begin{questions}
+\question[15]
+Define \(f:[0,2]\to\mathbb R\) by \(f(x)=3x\). Explicitly define a sequence of
+partitions \(\{P_n\}\) of \([0,2]\), and then prove that this sequence
+is Archimedian for \(f\) on \([0,2]\).
+
+\newpage
+\question[15]
+Compute the boundary of the subset \(\mathbb Q^2\) of \(\mathbb R^2\).
+
+\newpage
+\question[15]
+Prove that the function \(f:\mathbb R^2\to\mathbb R\) defined by
+\[
+f(x,y) =
+\begin{cases}
+  \frac{x^2y}{x^3+y^3} & (x,y)\not=(0,0) \\
+  0 & (x,y)=(0,0)
+\end{cases}
+\]
+is not continuous.
+
+\newpage
+\question[15]
+Let \(f:\mathbb R^n\to\mathbb R\) be defined by
+\[
+f(\vect x) =
+\begin{cases}
+  \|\vect x\| & \|\vect x\|\in \mathbb R\setminus\mathbb Q\\
+  0 & \|\vect x\|\in\mathbb Q
+\end{cases}
+.\]
+Prove that \(f\) is continuous at \(\vect 0\).
+
+\newpage
+\question[15]
+Let \(d:X^2\to[0,\infty)\) be a metric on \(X\). Prove that the function
+\(e:X^2\to[0,\infty)\) defined by \(e(x,y)=\min(d(x,y),1)\) satisfies
+the triangle inequality for the below cases:
+
+\textbf{Case \(e(x,y)+e(y,z)<1\):}
+\vfill
+\vfill
+
+\textbf{Case \(e(x,y)+e(y,z)\geq 1\):}
+\vfill
+
+
+\newpage
+\question[15]
+Compute \(f_y(0,0)\) where \(f:\mathbb R^2\to\mathbb R\) is defined by
+\[
+f(x,y) =
+\begin{cases}
+  \frac{x^2y}{x^3+y^3} & (x,y)\not=(0,0) \\
+  0 & (x,y)=(0,0)
+\end{cases}
+.\]
+
+\newpage
+\question[15]
+Let \(f:\mathbb R^n\to\mathbb R\) be continuous such that
+\(f(\vect 0)=0\). Prove that for each vector \(\vect p\in\mathbb R^n\),
+there exists another vector \(\vect x\in\mathbb R^n\) such that
+\(\frac{\partial f}{\partial\vect p}(\vect x)=f(\vect p)\).
+
+\newpage
+\question[15]
+Recall that \(\ln:(0,\infty)\to\mathbb R\) is defined
+by \(\ln(x)=\int_1^x\frac{1}{t}dt\).
+Show that \(f:(-\infty,0)\to\mathbb R\) defined by
+\(f(x)=\ln(-x)\) is the unique solution to the differential equation
+\[
+\begin{cases}
+  f'(x)=\frac{1}{x} & \forall x\in(-\infty,0) \\
+  f(-1)=0
+\end{cases}
+.\]
+
+\end{questions}
+
+\end{document}
